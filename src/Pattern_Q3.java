@@ -1,8 +1,8 @@
-    /*  12345
-        12345
-        12345
-        12345
-        12345 */
+    /*  54321
+        54321
+        54321
+        54321
+        54321 */
 import java.util.Scanner;
 
 public class Pattern_Q3 {
@@ -11,7 +11,7 @@ public class Pattern_Q3 {
         int r= sc.nextInt();
         int cl= sc.nextInt();
         for (int i=1;i<=r;i++){
-            for (int j=1;j<=cl;j++){
+            for (int j=cl;j>=1;j--){
                 System.out.print(j);
             }
             System.out.println();

@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class prefix_quries {
     static int [] oneIndexPrefixQuries(int [] arr){
         int n=arr.length;
-        for (int i=1;i<=n;i++){
-            arr[i]+=arr[n-1];
+        for (int i=1;i<n;i++){
+            arr[i]+=arr[i-1];
         }
         return arr;
     }
@@ -13,9 +13,9 @@ public class prefix_quries {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the size of Array");
         int n=sc.nextInt();
-        int [] arr=new int[n];
+        int [] arr=new int[n+1];
         System.out.println("Enter "+n+ " Element");
-        for (int i=0;i<arr.length;i++){
+        for (int i=1;i<=n;i++){
             arr[i]= sc.nextInt();
         }
        int [] prefSum=oneIndexPrefixQuries(arr);
@@ -26,7 +26,7 @@ public class prefix_quries {
             int l= sc.nextInt();
             int r=sc.nextInt();
             int ans=prefSum[r]-prefSum[l-1];
-            System.out.println(ans);
+            System.out.println("Sum "+ans);
         }
 
 
